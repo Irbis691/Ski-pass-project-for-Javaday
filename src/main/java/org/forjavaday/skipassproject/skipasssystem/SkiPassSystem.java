@@ -235,12 +235,7 @@ public class SkiPassSystem {
 	 * @param till - end of period
 	 */
 	public void summaryStatisticsForPeriod(LocalDateTime since, LocalDateTime till) {
-		for(StatisticlEment el: statistic) {
-			LocalDateTime date= el.getDATE();
-			if(date.isAfter(since) && date.isBefore(till)) {
-				skiPassVerifyingInfo(el);
-			}
-		}
+		statisticByType(since, till, "org.forjavaday.skipassproject.skipasssystem.SkiPass");		
 	}
 
 	/**
@@ -251,13 +246,13 @@ public class SkiPassSystem {
 	 */
 	public void summaryStatisticsForPeriodGroupByType(LocalDateTime since, LocalDateTime till) {
 		System.out.println("Ski passes for number of lifts:");
-		statisticByType(since, till, "org.forjavaday.skipassproject.SkiPassForLifts");		
+		statisticByType(since, till, "org.forjavaday.skipassproject.skipasssystem.SkiPassForLifts");		
 		System.out.println("Ski passes for number of days:");
-		statisticByType(since, till, "org.forjavaday.skipassproject.SkiPassForDays");	
+		statisticByType(since, till, "org.forjavaday.skipassproject.skipasssystem.SkiPassForDays");	
 		System.out.println("Season passes:");
-		statisticByType(since, till, "org.forjavaday.skipassproject.SeasonPass");	
+		statisticByType(since, till, "org.forjavaday.skipassproject.skipasssystem.SeasonPass");	
 		System.out.println("Ski passes for half-day:");
-		statisticByType(since, till, "org.forjavaday.skipassproject.SkiPassForHalfDay");	
+		statisticByType(since, till, "org.forjavaday.skipassproject.skipasssystem.SkiPassForHalfDay");	
 	}
 
 	/**

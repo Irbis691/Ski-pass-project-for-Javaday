@@ -24,6 +24,8 @@ public class App
     	sps.summaryStatisticsForPeriodGroupByType(LocalDateTime.now().minusDays(1), LocalDateTime.now().plusDays(1));
     	turnstile.verify(sp0);
     	sps.summaryStatisticsForPeriodGroupByType(LocalDateTime.now().minusDays(1), LocalDateTime.now().plusDays(1));
+    	System.out.println("===========================");
+    	System.out.println("Summary statistic:");
     	sps.summaryStatisticsForPeriod(LocalDateTime.now().minusDays(1), LocalDateTime.now().plusDays(1));
     }
 }
